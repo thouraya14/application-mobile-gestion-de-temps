@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45180262098",
+    "project_id": "baseapp-ce5ad",
+    "storage_bucket": "baseapp-ce5ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45180262098:android:c83e1b20278a85eb3cbf0b",
+        "android_client_info": {
+          "package_name": "com.example.devapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkB5HmsqxWwe9oE9ChFKpm6Y1iBT4cOME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
