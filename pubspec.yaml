@@ -52,6 +52,7 @@ dependencies:
   awesome_notifications: ^0.9.3+1
   flutter_firebase_chat_core: ^1.6.7
   url_launcher: ^6.2.6
+  
 
  
 dev_dependencies:
@@ -89,6 +90,11 @@ flutter:
     - images/task.jpg
     - images/get.jpg
     - images/google.jpg
+    - images/home.jpg
+    - images/loisires.jpg
+    - images/personnal.jpg
+    - images/report.jpg
+    - images/work.jpg
 
   #   - images/a_dot_ham.jpeg
 

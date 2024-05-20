@@ -1,9 +1,11 @@
+import 'package:devapp/hometask/listTaskHome.dart';
+import 'package:devapp/worktask/taskwork.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:devapp/%20WelcomeScreen.dart';
-import 'package:devapp/home.dart';
+import 'package:devapp/screens/%20WelcomeScreen.dart';
+import 'package:devapp/personaltask/home.dart';
 import 'package:devapp/rapport_page.dart';
-import 'HomePage.dart'; // Import the HomePage.dart file
+// Import the HomePage.dart file
  // Import the ListTasks.dart file
 
 const PRIMARY = "primary";
@@ -29,6 +31,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
         preferredSize: Size.fromHeight(70),
         child: AppBar(
           backgroundColor: myColors[PRIMARY],
+          flexibleSpace: Padding(
+          padding: const EdgeInsets.only(top: 80)), // Move the image down
+          
           elevation: 0,
           leading: Padding(
             padding: const EdgeInsets.only(
@@ -62,18 +67,33 @@ class _DashboardScreenState extends State<DashboardScreen> {
       backgroundColor: myColors[WHITE],
       body: Column(
         children: [
-          Expanded(
-            flex: 6,
-            child: Container(
-              decoration: BoxDecoration(
-                color: myColors[PRIMARY],
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(40),
-                  bottomRight: Radius.circular(40),
-                ),
-              ),
-            ),
-          ),
+         Expanded(
+  flex: 6,
+  child: Container(
+    decoration: BoxDecoration(
+      color: myColors[PRIMARY],
+      borderRadius: BorderRadius.only(
+        bottomLeft: Radius.circular(40),
+        bottomRight: Radius.circular(40),
+      ),
+    ),
+    child: Stack(
+      alignment: Alignment.center,
+      children: [
+        Image.asset(
+          'images/img.jpg', // Replace 'images/img.jpg' with the actual path of your image
+          width: 900, // Increase the width
+          height: 900, // Increase the height
+          fit: BoxFit.cover, // Adjust the fit based on your requirement
+        ),
+        // Add other widgets on top of the image if necessary
+      
+      ],
+        
+    ),
+  ),
+),
+        
           Expanded(
             flex: 12,
             child: Center(
@@ -132,10 +152,22 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return GestureDetector(
       onTap: () {
         if (text == 'Personal') {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => ListPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => ListPersonalPage()));
         } else {
-          // Handle navigation for other buttons
+           if (text == 'Work') {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => ListtaskPage()));
+           
+        }else{
+           if (text == 'Home'){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => ListtaskHomePage()));
+        
+        }else{
+             if (text == 'Leisure'){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => ListLeisuresPage()));
         }
+        } 
+      }
+        } 
       },
       child: Container(
         margin: EdgeInsets.all(8.0),

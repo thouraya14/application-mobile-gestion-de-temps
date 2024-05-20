@@ -1,6 +1,9 @@
+import 'package:devapp/homePage.dart';
+import 'package:devapp/rapport_page.dart';
 import 'package:flutter/material.dart';
 import 'loginScreen.dart';
 import 'theme.dart';
+import 'homePage.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -37,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const LoginScreen()),
+                MaterialPageRoute(builder: (context) => ReportPage()),
               );
             },
             icon: Icon(
